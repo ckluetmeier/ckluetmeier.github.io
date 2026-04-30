@@ -1,10 +1,12 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
   <title>Fieldwork | Camryn Kluetmeier</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
   <link rel="stylesheet" href="assets/css/main.css" />
+
   <style>
     #topnav {
       position: fixed;
@@ -12,27 +14,55 @@
       right: 2em;
       z-index: 10000;
       display: flex;
-      gap: 1.5em;
+      gap: 1.35em;
     }
+
     #topnav a {
+      color: #787878;
+      font-family: "Source Sans Pro", Helvetica, sans-serif;
+      font-size: 1em;
+      font-weight: 400;
+      line-height: 1.75em;
+      letter-spacing: 0.025em;
       text-decoration: none;
-      font-weight: 600;
-      color: #ffffff;
-      border-bottom: none;
+      border-bottom: dotted 1px rgba(120, 120, 120, 0.5);
     }
+
     #topnav a:hover {
-      opacity: 0.75;
+      color: #262626;
+      border-bottom-color: transparent;
+    }
+
+    #topnav a.active {
+      color: #262626;
+      border-bottom-color: transparent;
+    }
+
+    /* Fix bottom spacing */
+    #main {
+      padding-bottom: 6em;
+      flex: 1;
+    }
+
+    /* Keep footer at bottom */
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
   </style>
 </head>
+
 <body class="is-preload">
 
+  <!-- Navigation -->
   <nav id="topnav">
     <a href="index.html">Home</a>
     <a href="research.html">Research</a>
-    <a href="fieldwork.html">Fieldwork</a>
+    <a href="fieldwork.html" class="active">Fieldwork</a>
   </nav>
 
+  <!-- Sidebar Header -->
   <header id="header">
     <div class="inner">
       <a href="index.html" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
@@ -46,6 +76,7 @@
     </div>
   </header>
 
+  <!-- Main Content -->
   <div id="main">
     <section id="one">
       <header class="major">
@@ -57,68 +88,75 @@
     <section id="two">
       <h2>Snapshots from the field</h2>
       <div class="row">
-        <section id="two">
-			<h2>Snapshots from the field</h2>
-			<div class="row">
-				<article class="col-6 col-12-xsmall work-item">
-					<a href="images/fulls/01.jpg" class="image fit thumb"><img src="images/thumbs/01.jpg" alt="" /></a>
-					<h3>Collecting LiDAR data to compare to SWOT.</h3>
-					<p>Waimakariri River, New Zealand </p>
-				</article>
-				<article class="col-6 col-12-xsmall work-item">
-					<a href="images/fulls/02.jpg" class="image fit thumb"><img src="images/thumbs/02.jpg" alt="" /></a>
-					<h3>Installing pressure transducers to measure water level. Photo by A. LaFaro.</h3>
-					<p>Waimakariri River, New Zealand</p>
-				</article>
-				<article class="col-6 col-12-xsmall work-item">
-					<a href="images/fulls/03.jpg" class="image fit thumb"><img src="images/thumbs/03.jpg" alt="" /></a>
-					<h3>Collecting rock samples for cosmogenic nuclide dating on a gradient up the Taku D nunatak. </h3>
-					<p>Juneau Icefield, AK</p>
-				</article>
-				<article class="col-6 col-12-xsmall work-item">
-					<a href="images/fulls/04.jpg" class="image fit thumb"><img src="images/thumbs/04.jpg" alt="" /></a>
-					<h3>Running crevasses on the Llewellyn Glacier.</h3>
-					<p>Juneau Icefield, Canada</p>
-				</article>
-				<article class="col-6 col-12-xsmall work-item">
-					<a href="images/fulls/05.jpg" class="image fit thumb"><img src="images/thumbs/05.jpg" alt="" /></a>
-					<h3>Investigating rock glacier kinematics. Photo by J. Munroe.</h3>
-					<p>Uinta Mountains, UT</p>
-				</article>
-				<article class="col-6 col-12-xsmall work-item">
-					<a href="images/fulls/06.jpg" class="image fit thumb"><img src="images/thumbs/06.jpg" alt="" /></a>
-					<h3>North Temperate Lakes LTER Base Crew 2017.</h3>
-					<p>Trout Lake Station, WI</p>
-				</article>
+
+        <article class="col-6 col-12-xsmall work-item">
+          <a href="images/fulls/01.jpg" class="image fit thumb"><img src="images/thumbs/01.jpg" alt="" /></a>
+          <h3>Collecting LiDAR data to compare to SWOT.</h3>
+          <p>Waimakariri River, New Zealand</p>
+        </article>
+
+        <article class="col-6 col-12-xsmall work-item">
+          <a href="images/fulls/02.jpg" class="image fit thumb"><img src="images/thumbs/02.jpg" alt="" /></a>
+          <h3>Installing pressure transducers to measure water level. Photo by A. LaFaro.</h3>
+          <p>Waimakariri River, New Zealand</p>
+        </article>
+
+        <article class="col-6 col-12-xsmall work-item">
+          <a href="images/fulls/03.jpg" class="image fit thumb"><img src="images/thumbs/03.jpg" alt="" /></a>
+          <h3>Collecting rock samples for cosmogenic nuclide dating on a gradient up the Taku D nunatak.</h3>
+          <p>Juneau Icefield, AK</p>
+        </article>
+
+        <article class="col-6 col-12-xsmall work-item">
+          <a href="images/fulls/04.jpg" class="image fit thumb"><img src="images/thumbs/04.jpg" alt="" /></a>
+          <h3>Running crevasses on the Llewellyn Glacier.</h3>
+          <p>Juneau Icefield, Canada</p>
+        </article>
+
+        <article class="col-6 col-12-xsmall work-item">
+          <a href="images/fulls/05.jpg" class="image fit thumb"><img src="images/thumbs/05.jpg" alt="" /></a>
+          <h3>Investigating rock glacier kinematics. Photo by J. Munroe.</h3>
+          <p>Uinta Mountains, UT</p>
+        </article>
+
+        <article class="col-6 col-12-xsmall work-item">
+          <a href="images/fulls/06.jpg" class="image fit thumb"><img src="images/thumbs/06.jpg" alt="" /></a>
+          <h3>North Temperate Lakes LTER Base Crew 2017.</h3>
+          <p>Trout Lake Station, WI</p>
+        </article>
+
       </div>
     </section>
   </div>
 
-			<!-- Footer -->
-			<footer id="footer">
-				<div class="inner">
-					<ul class="icons">
-						<li><a href="https://scholar.google.com/citations?user=zaVG5EsAAAAJ&hl=en&oi=ao"
-								class="icon fa-graduation-cap"><span class="label">Google Scholar</span></a></li>
-						<li><a href="https://bsky.app/profile/ckluetmeier.bsky.social"
-								class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="https://github.com/ckluetmeier" class="icon brands fa-github"><span
-									class="label">Github</span></a></li>
-						<li><a href="mailto:camryn.kluetmeier@duke.edu" class="icon solid fa-envelope"><span
-									class="label">Email</span></a></li>
-					</ul>
-					<ul class="copyright">
-						<li>&copy; 2026 Camryn Kluetmeier</li>
-						<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-				</div>
-			</footer>
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="inner">
+      <ul class="icons">
+        <li><a href="https://scholar.google.com/citations?user=zaVG5EsAAAAJ&hl=en&oi=ao"
+            class="icon fa-graduation-cap"><span class="label">Google Scholar</span></a></li>
+        <li><a href="https://bsky.app/profile/ckluetmeier.bsky.social"
+            class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+        <li><a href="https://github.com/ckluetmeier" class="icon brands fa-github"><span
+              class="label">Github</span></a></li>
+        <li><a href="mailto:camryn.kluetmeier@duke.edu" class="icon solid fa-envelope"><span
+              class="label">Email</span></a></li>
+      </ul>
+      <ul class="copyright">
+        <li>&copy; 2026 Camryn Kluetmeier</li>
+        <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+      </ul>
+    </div>
+  </footer>
 
+  <!-- Scripts -->
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/jquery.poptrox.min.js"></script>
   <script src="assets/js/browser.min.js"></script>
   <script src="assets/js/breakpoints.min.js"></script>
   <script src="assets/js/util.js"></script>
   <script src="assets/js/main.js"></script>
+
 </body>
+
 </html>
