@@ -2,55 +2,51 @@
 <html>
 
 <head>
-  <title>Fieldwork | Camryn Kluetmeier</title>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-  <link rel="stylesheet" href="assets/css/main.css" />
+	<title>Fieldwork | Kluetmeier</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
 
-  <style>
-    #topnav {
-      position: fixed;
-      top: 1.5em;
-      right: 2em;
-      z-index: 10000;
-      display: flex;
-      gap: 1.35em;
-    }
+	<style>
+  #topnav {
+    position: fixed;
+    top: 1.5em;
+    right: 2em;
+    z-index: 10000;
+    display: flex;
+    gap: 1em;
+  }
 
-    #topnav a {
-      color: #787878;
-      font-family: "Source Sans Pro", Helvetica, sans-serif;
-      font-size: 1em;
-      font-weight: 400;
-      line-height: 1.75em;
-      letter-spacing: 0.025em;
-      text-decoration: none;
-      border-bottom: dotted 1px rgba(120, 120, 120, 0.5);
-    }
+  #topnav a {
+    color: #787878;
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    font-size: 2em;
+    font-weight: 400;
+    line-height: 1.5em;
+    letter-spacing: -0.035em;
+    text-decoration: none;
+    border-bottom: none;
+  }
 
-    #topnav a:hover {
-      color: #262626;
-      border-bottom-color: transparent;
-    }
+  #topnav a:hover,
+  #topnav a.active {
+    color: #262626;
+  }
+		#topnav a {
+  position: relative;
+}
 
-    #topnav a.active {
-      color: #262626;
-      border-bottom-color: transparent;
-    }
-
-    /* Fix bottom spacing */
-    #main {
-      padding-bottom: 6em;
-      flex: 1;
-    }
-
-    /* Keep footer at bottom */
-    body {
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-  </style>
+#topnav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background: #222;
+  opacity: 0.2;
+}
+	</style>
 </head>
 
 <body class="is-preload">
