@@ -8,9 +8,20 @@
 	<link rel="stylesheet" href="assets/css/main.css" />
 
 	<style>
+  #topnav-bar {
+    position: fixed;
+    top: 0;
+    left: 23em; /* matches #header width so bar starts after sidebar */
+    right: 0;
+    height: 4em;
+    background: #fff;
+    z-index: 9999;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  }
+
   #topnav {
     position: fixed;
-    top: 1.5em;
+    top: 1.1em;
     right: 2em;
     z-index: 10000;
     display: flex;
@@ -46,12 +57,40 @@
   background: #222;
   opacity: 0.2;
 }
+  .research-media-row {
+    display: flex;
+    gap: 1.5em;
+    margin: 0 0 2em 0;
+  }
+
+  .research-media-item {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .research-media-item img,
+  .research-media-item video {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  @media screen and (max-width: 736px) {
+    .research-media-row {
+      flex-direction: column;
+    }
+  }
+
 	</style>
 </head>
 
 <body class="is-preload">
 
-	<nav id="topnav">
+  <!-- Nav bar background -->
+  <div id="topnav-bar"></div>
+
+  <!-- Navigation -->
+  <nav id="topnav">
 		<a href="index.html">Home</a>
 		<a href="research.html">Research</a>
 		<a href="fieldwork.html">Fieldwork</a>
@@ -90,18 +129,38 @@
         accuracies necessary to characterize global spatiotemporal variations in water storage change and river discharge.
       </p>
 
+      <div class="research-media-row">
+        <div class="research-media-item">
+          <img src="images/research/SWOT_data_examples.png" alt="SWOT data examples" />
+        </div>
+        <div class="research-media-item">
+          <video autoplay muted loop playsinline>
+            <source src="images/research/drift_animation.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+
       <h3>InSAR-based characterization of Utah rock glacier kinematics</h3>
       <p>
         Rock glaciers are common features in alpine environments that play an important role in hydrology and landscape
         evolution. For my senior thesis at Middlebury College, I used satellite-based radar interferometry, topographic
         data, and optical imagery to identify and characterize rock glacier motion in the La Sal Mountains, Utah, USA,
-        from 2016–2024. This work was advised by Dr. Jeffery Munroe at Middlebury and radar specialist Dr. Alexander
+        from 2016–2024. This work was advised by geomorphologist Dr. Jeffery Munroe at Middlebury and radar specialist Dr. Alexander
         Handwerger at NASA’s Jet Propulsion Laboratory. Our resulting inventory includes 41 active and transitional rock
         glaciers and 20 relict features. Notably, these rock glaciers remain active or transitional despite being located
         above the 0 °C MAAT isotherm for the 1991–2020 climate normal, suggesting a resilience to rising air temperatures.
         Overall, our results provide insight into environmental controls on rock glacier kinematics and demonstrate an
         approach for developing inventories critical to improving estimates of alpine water storage.
       </p>
+
+      <div class="research-media-row">
+        <div class="research-media-item">
+          <img src="images/research/RoGI.png" alt="Rock glacier inventory map" />
+        </div>
+        <div class="research-media-item">
+          <img src="images/research/RG_example.png" alt="Rock glacier example" />
+        </div>
+      </div>
     </section>
   </div>
 
