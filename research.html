@@ -11,7 +11,7 @@
   #topnav-bar {
     position: fixed;
     top: 0;
-    left: 23em; /* matches #header width so bar starts after sidebar */
+    left: 0; /* matches #header width so bar starts after sidebar */
     right: 0;
     height: 4em;
     background: #fff;
@@ -71,8 +71,10 @@
   .research-media-item img,
   .research-media-item video {
     width: 100%;
-    height: auto;
+    height: 300px;
+    object-fit: contain;
     display: block;
+    background: #f7f7f7;
   }
 
   @media screen and (max-width: 736px) {
