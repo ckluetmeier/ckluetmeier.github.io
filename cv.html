@@ -62,12 +62,21 @@
   .cv-actions {
     margin: 0 0 1.5em 0;
     font-family: "Source Sans Pro", Helvetica, sans-serif;
+    color: #787878;
+  }
+
+  .cv-actions a {
+    color: #787878;
+    border-bottom-color: rgba(120, 120, 120, 0.5);
+  }
+
+  .cv-actions a:hover {
+    color: #262626;
+    border-bottom-color: rgba(38, 38, 38, 0.5);
   }
 
   .cv-viewer {
     width: 100%;
-    /* US Letter page (612x792) plus room for the viewer toolbar, so a whole
-       CV page is visible at once rather than being scaled down to fit. */
     aspect-ratio: 612 / 830;
     min-height: 700px;
     border: 1px solid #e5e5e5;
@@ -87,7 +96,6 @@
     text-align: center;
   }
 
-  /* Most mobile browsers cannot render an embedded PDF; show the link instead. */
   @media screen and (max-width: 736px) {
     .cv-viewer {
       display: none;
