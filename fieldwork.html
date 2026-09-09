@@ -69,9 +69,16 @@
     overflow: hidden;
   }
 
+  /* .work-item (needed for poptrox) adds 2em below each tile and 1.5em
+     below each .image; zero both so the 1.5em grid gap is the only spacing. */
+  .gallery-item.work-item {
+    margin: 0;
+  }
+
   .gallery-item a.image {
     display: block;
     border-bottom: none;
+    margin: 0;
   }
 
   .gallery-item a.image::before {
