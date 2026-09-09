@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Fieldwork | Kluetmeier</title>
+	<title>CV | Kluetmeier</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
@@ -57,6 +57,42 @@
   background: #222;
   opacity: 0.2;
 }
+
+  /* CV viewer */
+  .cv-actions {
+    margin: 0 0 1.5em 0;
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+  }
+
+  .cv-viewer {
+    width: 100%;
+    /* US Letter page (612x792) plus room for the viewer toolbar, so a whole
+       CV page is visible at once rather than being scaled down to fit. */
+    aspect-ratio: 612 / 830;
+    min-height: 700px;
+    border: 1px solid #e5e5e5;
+    background: #f7f7f7;
+  }
+
+  .cv-viewer object,
+  .cv-viewer iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+  }
+
+  .cv-fallback {
+    padding: 2em;
+    text-align: center;
+  }
+
+  /* Most mobile browsers cannot render an embedded PDF; show the link instead. */
+  @media screen and (max-width: 736px) {
+    .cv-viewer {
+      display: none;
+    }
+  }
 	</style>
 </head>
 
@@ -69,8 +105,8 @@
   <nav id="topnav">
     <a href="index.html">Home</a>
     <a href="research.html">Research</a>
-    <a href="fieldwork.html" class="active">Fieldwork</a>
-    <a href="cv.html">CV</a>
+    <a href="fieldwork.html">Fieldwork</a>
+    <a href="cv.html" class="active">CV</a>
   </nav>
 
   <!-- Sidebar Header -->
@@ -91,49 +127,21 @@
   <div id="main">
     <section id="one">
       <header class="major">
-        <h2>Snapshots from the field</h2>
+        <h2>Curriculum Vitae</h2>
       </header>
-    </section>
 
-    <section id="two">
-      <div class="row">
+      <p class="cv-actions">
+        <a href="cv.pdf" target="_blank" rel="noopener">Open full screen</a> &nbsp;&middot;&nbsp;
+        <a href="cv.pdf" download="Kluetmeier_CV.pdf">Download PDF</a>
+      </p>
 
-        <article class="col-6 col-12-xsmall work-item">
-          <a href="images/fulls/01.jpg" class="image fit thumb"><img src="images/thumbs/01.jpg" alt="" /></a>
-          <h3>Collecting LiDAR data to compare to SWOT.</h3>
-          <p>Waimakariri River, New Zealand</p>
-        </article>
-
-        <article class="col-6 col-12-xsmall work-item">
-          <a href="images/fulls/02.jpg" class="image fit thumb"><img src="images/thumbs/02.jpg" alt="" /></a>
-          <h3>Installing pressure transducers to measure water level. Photo by A. LaFaro.</h3>
-          <p>Waimakariri River, New Zealand</p>
-        </article>
-
-        <article class="col-6 col-12-xsmall work-item">
-          <a href="images/fulls/03.jpg" class="image fit thumb"><img src="images/thumbs/03.jpg" alt="" /></a>
-          <h3>Collecting rock samples for cosmogenic nuclide dating on a gradient up the Taku D nunatak.</h3>
-          <p>Juneau Icefield, AK</p>
-        </article>
-
-        <article class="col-6 col-12-xsmall work-item">
-          <a href="images/fulls/04.jpg" class="image fit thumb"><img src="images/thumbs/04.jpg" alt="" /></a>
-          <h3>Running crevasses on the Llewellyn Glacier.</h3>
-          <p>Juneau Icefield, Canada</p>
-        </article>
-
-        <article class="col-6 col-12-xsmall work-item">
-          <a href="images/fulls/05.jpg" class="image fit thumb"><img src="images/thumbs/05.jpg" alt="" /></a>
-          <h3>Investigating rock glacier kinematics. Photo by J. Munroe.</h3>
-          <p>Uinta Mountains, UT</p>
-        </article>
-
-        <article class="col-6 col-12-xsmall work-item">
-          <a href="images/fulls/06.jpg" class="image fit thumb"><img src="images/thumbs/06.jpg" alt="" /></a>
-          <h3>North Temperate Lakes LTER Base Crew 2017.</h3>
-          <p>Trout Lake Station, WI</p>
-        </article>
-
+      <div class="cv-viewer">
+        <object data="cv.pdf" type="application/pdf">
+          <div class="cv-fallback">
+            <p>Your browser can&rsquo;t display the PDF inline.
+              <a href="cv.pdf" target="_blank" rel="noopener">Open it in a new tab</a>.</p>
+          </div>
+        </object>
       </div>
     </section>
   </div>
@@ -160,7 +168,6 @@
 
   <!-- Scripts -->
   <script src="assets/js/jquery.min.js"></script>
-  <script src="assets/js/jquery.poptrox.min.js"></script>
   <script src="assets/js/browser.min.js"></script>
   <script src="assets/js/breakpoints.min.js"></script>
   <script src="assets/js/util.js"></script>
